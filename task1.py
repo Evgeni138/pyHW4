@@ -4,11 +4,17 @@
 from math import *
 
 d = list(input('Введите d '))
-num = pi
 count = -1
+# ВЫчисление числа Пи методом ряда Нилаканта
+veracity = 200000
+p = 3
+c = 2
+for i in range(2, veracity):
+    p += (-1) ** i * 4 / (c * (c + 1) * (c + 2))
+    c += 2
+
 for i in range(len(d)):
     if d[i] != '.':
         count += 1
-print(count)
-num = num * 10 ** count // 1 / 10 ** count
-print(num)
+p = p * 10 ** count // 1 / 10 ** count
+print(p)
