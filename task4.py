@@ -15,7 +15,7 @@ for i in range(k, -1, -1):
         elif i == 1:
             lst.append(f'{a} * x')
         else:
-            lst.append(f'{a} * x ** {i}')
+            lst.append(f'{a} * x^{i}')
 print(lst)
 
 
